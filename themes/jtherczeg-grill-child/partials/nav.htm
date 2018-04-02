@@ -7,6 +7,8 @@
 		'products':  ['samples/products', 'Products'],
         'enquire':   ['samples/contact-us', 'Enquire'],
         'events': ['events', 'Events & Meetings'],
+        'guide': ['become-guide', 'Become a guide'],
+        'book':  ['book-now', 'Book Now'],
     }
 %}
 
@@ -41,21 +43,21 @@
                     <a href="{{ 'home'|page }}"><img src="{{ 'assets/images/grootLogo_OMH_V1.png'|theme }}" title="Grill Template" alt="Grill Website Template" ></a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <div class="main-menu">
                     <ul>
                         {{ nav.render_menu(links) }}
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <div class="search-box">  
                     <form role="form" name="search_form" method="get" class="search_form">
                         <input id="search" type="text" />
                         <input type="submit" id="search-button" />
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
