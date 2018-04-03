@@ -41,7 +41,7 @@ p {
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
-}javascript:;
+}
 
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -1366,3 +1366,29 @@ footer {
 }
 .bookings h3, .bookings div{
     margin-top:20px}
+.bookings h4{
+    padding-top: 20px;
+}
+.bookings label {
+    padding:0px;
+    border:none;
+    border-radius:0px;
+}
+.paypal-button {
+  width: 150px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #3c763d; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0;
+  outline: none;
+  float:right;
+}
+

@@ -2,6 +2,11 @@ title = "book-now"
 url = "/book-now"
 layout = "book-now"
 is_hidden = 0
+
+[paypal]
+item_name = "My Product"
+amount = 100
+type = "buynow"
 ==
 <div id="heading">
     <div class="container">
@@ -17,10 +22,11 @@ is_hidden = 0
 
 <div id="timeline-post">
   <div class="container">
+  <div class="col-md-8 col-md-offset-2">
   <form>
 	<div class="row">
 		
-		<div class="form-group col-md-8 col-md-offset-2 bookings">
+		<div class="form-group  bookings">
 		<h4>SELECT YOUR GUIDED WALKS PRODUCT BELOW:</h4>
 		<div class="col-md-4"><label class="btn btn-success"><img src="{{ 'assets/images/booking1.jpg'|theme }}" alt="..." class="img-thumbnail img-check check"data-item-id="1" id ='item_1'><input type="checkbox" name="chk1" value="val1" class="hidden" autocomplete="off"></label></div>
 		<div class="col-md-4"><label class="btn btn-success"><img src="{{ 'assets/images/booking2.jpg'|theme }}" alt="..." class="img-thumbnail img-check check" data-item-id="2" id="item_2"><input type="checkbox" name="chk2" value="val2" class="hidden" autocomplete="off"></label></div>
@@ -36,19 +42,77 @@ is_hidden = 0
 	
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label"><stromg>No of guests*</strong></label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputEmail3" style='margin-top:0px'>
+    <div class="col-sm-4">
+    <select class="form-control" id="noOfGuests">
+        <option>Select</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
     </div>
   </div>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label"><stromg>Select a date*</strong></label>
-     <div class="col-sm-4 input-group date">
-          <input type="text" class="form-control inputstl" id="startDate" placeholder="Select Date"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+     <div class="col-sm-4 input-group date"  style='padding-left: 15px;'>
+          <input type="text" class="form-control inputstl" id="startDate" placeholder="Select Date" style='margin-top:0px'><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
           
-        </div
+        </div>
   </div>
-
-	
+  	<hr></hr>
+  	<div class="row">
+      	<div class="col-md-6">
+          	<h4>Billing Details</h4>
+          	<div class="form-group row">
+            <label for="inputEmail3" class="col-sm-4 col-form-label"><stromg>First Name*</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputEmail3" style='margin-top:0px'>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-4 col-form-label"><stromg>Last Name*</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputEmail3" style='margin-top:0px'>
+            </div>
+          </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-4 col-form-label"><stromg>Address*</strong></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="inputEmail3" style='margin-top:0px'>
+                </div>
+              </div>
+               <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-4 col-form-label"><stromg>Phone*</strong></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="inputEmail3" style='margin-top:0px'>
+                </div>
+              </div>
+        	<div class="form-group row">
+                <label for="inputEmail3" class="col-sm-4 col-form-label"><stromg>Email*</strong></label>
+                <div class="col-sm-8">
+                  <input type="email" class="form-control" id="inputEmail3" style='margin-top:0px'>
+                </div>
+              </div>
+      	</div>
+      	<div class="col-md-6" style="background-color: #f3f3f3;
+border: 1px solid;">
+      	<h4>Cost</h4>
+      	<table id="summary-table" width="100%" cellspacing="0" cellpadding="0" border="0">
+				<tbody><tr class="SummaryRow" id="summary-row|0-0-0">
+	<td class="Data"><span id="summary-qty">0</span> x travellers</td>
+	<td class="Data GRight">$<span id="traveller-total">0.00</span></td>
+</tr><tr>
+	<td class="Data GRight" style="border-top: 2px solid #002A3A;">Total</td>
+	<td class="Data GRight" style="border-top: 2px solid #002A3A;"><strong>$<span id="summary-total">0.00</span></strong></td>
+</tr>
+			</tbody></table>
+      	</div>
+      	
+      	</div>
+  	
+  
 	</form>
+	{% component 'paypal' %}
+	</div>
 </div>
 </div>
